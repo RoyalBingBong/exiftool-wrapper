@@ -1,0 +1,37 @@
+{
+  "name": "exiftool-wrapper",
+  "version": "1.0.0",
+  "description": "JavaScript-Wrapper for ExifTool by Phil Harvey.",
+  "main": "lib/exiftool-wrapper.js",
+  "directories": {
+    "test": "test"
+  },
+  "devDependencies": {
+    "babel": "^6.5.2",
+    "babel-cli": "^6.5.1",
+    "babel-plugin-remove-comments": "^2.0.0",
+    "babel-preset-es2015": "^6.5.0"
+  },
+  "scripts": {
+    "compile": "babel lib/ src/",
+    "prepublish": "npm run compile",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RoyalBingBong/exiftool-wrapper.git"
+  },
+  "keywords": [
+    "exif",
+    "exiftool",
+    "metadata",
+    "image",
+    "video"
+  ],
+  "author": "David Koch <david-k@mail.de>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/RoyalBingBong/exiftool-wrapper/issues"
+  },
+  "homepage": "https://github.com/RoyalBingBong/exiftool-wrapper#readme",
+}

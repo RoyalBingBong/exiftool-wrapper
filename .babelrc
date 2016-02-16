@@ -1,0 +1,4 @@
+{
+  "plugins": ["remove-comments"],
+  "presets": ["es2015"]
+}
