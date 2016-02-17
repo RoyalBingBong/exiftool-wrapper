@@ -23,10 +23,3 @@ fs.readdir(testpath, function(err, files) {
     }
   }});
 });
-
-
-
-var test = [1,2,3,4,5,6,7,8,9]
-var res = test.slice(0,2)
-console.log(res)
-console.log(res.length)

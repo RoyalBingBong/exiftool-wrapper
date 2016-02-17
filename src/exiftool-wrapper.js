@@ -2,12 +2,12 @@
 const cp = require('child_process');
 const fs = require('fs');
 
-export function ({source, tags, useBufferLimit = true, maxBufferSize = 10000, callback}) {
+export function metadata ({source, tags, useBufferLimit = true, maxBufferSize = 10000, callback}) {
   return new Promise((resolve, reject) => {
     process.nextTick(() => {
       if(!source) {
-        let error = new Error('Missing sourcer');
-        tryCallback(callback, error)
+        let error = new Error('Missing source');
+        tryCallback(callback, error);
         reject(error);
       }
       let exifparams = prepareTags(tags);
@@ -21,7 +21,11 @@ export function ({source, tags, useBufferLimit = true, maxBufferSize = 10000, ca
       } else if (typeof source == "string") {
         exifparams.push(source);
       } else if (Array.isArray(source)) {
-        exifparams = exifparams.concat(source)
+        exifparams = exifparams.concat(source);
+      } else {
+        let error =  new Error('Invalid type for "source"!');
+        tryCallback(callback, error);
+        reject(error);
       }
 
       let exif = cp.spawn("exiftool", exifparams);
@@ -29,10 +33,11 @@ export function ({source, tags, useBufferLimit = true, maxBufferSize = 10000, ca
       let exiferr = "";
 
       if(usingBuffer) {
-        if(!useBufferLimit) {
-          maxBufferSize = source.length
-        }
-        let buf = source.slice(0, maxBufferSize);
+        let buf = (useBufferLimit ? source.slice(0, source.length) : source.slice(0, maxBufferSize));
+        // if(!useBufferLimit) {
+        //   maxBufferSize = source.length
+        // }
+        // let buf = source.slice(0, maxBufferSize);
         exif.stdin.write(buf);
         exif.stdin.end();
       }
@@ -46,9 +51,12 @@ export function ({source, tags, useBufferLimit = true, maxBufferSize = 10000, ca
       exif.on('close', (code) => {
         if(code == 0) {
           try {
-            var parsed = JSON.parse(exifdata)
-            tryCallback(callback, null, parsed)
-            resolve(parsed);
+            var parseddata = JSON.parse(exifdata);
+            if(parseddata.length == 1) {
+              parseddata = parseddata[0];
+            }
+            tryCallback(callback, null, parseddata);
+            resolve(parseddata);
           } catch(err) {
             tryCallback(callback, err);
             reject(err);
@@ -62,6 +70,46 @@ export function ({source, tags, useBufferLimit = true, maxBufferSize = 10000, ca
     });
   });
 }
+
+export function metadataSync({source, tags, useBufferLimit = true, maxBufferSize = 10000}) {
+  if(!source) {
+    throw new Error('Missing source');
+  }
+  let exifparams = prepareTags(tags);
+  exifparams.push('-j');    // "-j" for Exiftool json output
+
+  let etdata;
+  if(Buffer.isBuffer(source)) {
+    exifparams.push('-');   // "-" for piping the buffer into Exiftool
+    let buf = (useBufferLimit ? source.slice(0, source.length) : source.slice(0, maxBufferSize))
+    // if(!useBufferLimit) {
+    //   maxBufferSize = source.length
+    // }
+    // let buf = source.slice(0, maxBufferSize);
+    etdata = cp.spawnSync('exiftool', exifparams, {input: buf});
+  } else if (typeof source == "string") {
+    exifparams.push(source);
+    etdata = cp.spawnSync('exiftool', exifparams);
+  } else if (Array.isArray(source)) {
+    exifparams = exifparams.concat(source)
+    etdata = cp.spawnSync('exiftool', exifparams);
+  } else {
+    throw new Error('Invalid type for "source"!');
+  }
+
+  try {
+    var parseddata = JSON.parse(etdata.stdout);
+    if(jsondata.length == 1) {
+      parseddata = parseddata[0];
+    }
+    return parseddata;
+  } catch(e) {
+    throw new Error('Could not parse data returned by ExifTool');
+  }
+}
+
+
+
 
 /**
  * Helper function for callbacks

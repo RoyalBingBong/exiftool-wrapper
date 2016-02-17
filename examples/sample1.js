@@ -9,16 +9,16 @@ fs.readdir(samplepath, function(err, files) {
     return path.join(samplepath, f)
   })
   // As callback
-  exiftool.exiftool({source: files, tags: ['imAGewidth', 'imageheight'], callback: function (err, metadata) {
+  exiftool.metadata({source: files, tags: ['imagewidth', 'imageheight'], callback: function (err, metadata) {
     if(err) {
       return console.log(err);
     }
-    console.log(metadata);
+    console.log(JSON.stringify(metadata, null, 2));
   }});
   // As Promise:
-  exiftool.exiftool({source: files, tags: ['imAGewidth', 'imageheight']})
+  exiftool.metadata({source: files, tags: ['imagewidth', 'imageheight']})
     .then(function(metadata) {
-      console.log(metadata)
+      console.log(JSON.stringify(metadata, null, 2));
     })
     .catch(function(err) {
       console.log(err)
