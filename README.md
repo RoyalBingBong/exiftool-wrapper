@@ -6,7 +6,7 @@ You need to have the [ExifTool](http://www.sno.phy.queensu.ca/~phil/exiftool/) b
 
 
 ## Motivation
-I needed a module that would give me some basic metadata of media files typical for the web: .jpg, .png, .gif and .webm. I found another wrapper for ExifTool, but said wrapper only provided support for buffers, which resulted in problems for webm-files. In addition to that I could not filter tags. Hence my exiftool-wrapper.
+I needed a module that would give me some basic metadata of media files typical for the web: .jpg, .png, .gif and .webm. I found another wrapper for ExifTool, but said wrapper only provided support for buffers, which resulted in problems for webm-files. In addition to that, I wanted to parse local files without the need to read them in node first.
 
 # Usage
 `metadata()` and `metadataSync()` will return a single object or an array of objects containing the metadata.
