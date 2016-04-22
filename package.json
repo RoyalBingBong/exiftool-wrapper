@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "JavaScript-Wrapper for ExifTool by Phil Harvey.",
   "main": "lib/exiftool-wrapper.js",
+  "engine": { "node": ">=5.0.0" },
   "directories": {
     "example": "examples",
     "test": "test"
@@ -34,5 +35,5 @@
   "bugs": {
     "url": "https://github.com/RoyalBingBong/exiftool-wrapper/issues"
   },
-  "homepage": "https://github.com/RoyalBingBong/exiftool-wrapper#readme",
+  "homepage": "https://github.com/RoyalBingBong/exiftool-wrapper#readme"
 }
