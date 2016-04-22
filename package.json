@@ -30,7 +30,7 @@
     "video"
   ],
   "author": "David Koch <david-k@mail.de>",
-  "license": "MIT",
+  "license": "ISC",
   "bugs": {
     "url": "https://github.com/RoyalBingBong/exiftool-wrapper/issues"
   },
