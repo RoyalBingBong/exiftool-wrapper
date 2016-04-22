@@ -1,41 +1,51 @@
 # exiftool-wrapper
 JavaScript wrapper for ExifTool by Phil Harvey.
 
-## Requirements
-You need to have the [ExifTool](http://www.sno.phy.queensu.ca/~phil/exiftool/) by Phil Harvey installed or be able to call it from the command-line of your choice. I trust in your ability to find out on how to do this yourself.
+## Installation
+------
+The usual way:
+
+```npm install exiftool-wrapper```
+
+### Requirements
+You need to have the [ExifTool](http://www.sno.phy.queensu.ca/~phil/exiftool/) by Phil Harvey installed or be able to call it from your bash/console.
 
 
-## Motivation
-I needed a module that would give me some basic metadata of media files typical for the web: .jpg, .png, .gif and .webm. I found another wrapper for ExifTool, but said wrapper only provided support for buffers, which resulted in problems for webm-files. In addition to that, I wanted to parse local files without the need to read them in node first.
 
-# Usage
-`metadata()` and `metadataSync()` will return a single object or an array of objects containing the metadata.
+## Usage
+------
+You can use callbacks or promises.
+
 ```javascript
 var exiftool = require('exiftool-wrapper');
 
 exiftool.metadata({source, tags, maxBufferSize, useBufferLimit, callback});
 ```
-Or if you desperately need it to be sync:
+Or if you need it to be sync:
 ```javascript
 exiftool.metadataSync({source, tags, maxBufferSize, useBufferLimit});
 ```
-## Parameters
 
-* `source`: Path/paths or buffer. Examples:
+Depending on what you passed as `source`, you will either get single object or an array of objects containing the metadata. See below for a more detailed example.
+
+
+### Parameters
+
+* `source`: file, files or buffer. Examples:
   * String: `source: 'path/to/my/image.jpg'`
   * Array: `source: ['path/to/my/image1.jpg', 'path/to/my/image2.jpg', 'path/to/my/video.mp4']`
-  * Buffer: `source: <Buffer>`, e.g. via `fs.readFile()` etc.
-* `tags`: List of [tags](http://www.sno.phy.queensu.ca/~phil/exiftool/TagNames/index.html) that should be included or excluded. If omitted, the function will return all metadata that is available in `source`. Add a single dash `-` in front of the tag to exclude it. Examples:
-  * `tags: ['imagewidth', 'imageheight']` to only return the width and height of an image/video.
-  * `tags: ['-imagewidth', '-imageheight']` to exclude width and height in the returned metadata.
-* `useBufferLimit`: If set to `false` the whole Buffer will be piped into ExifTool. (default: `true`)
+  * Buffer: `source: <Buffer>`, e.g. via `fs.readFile()`
+* `tags`: List of [tags](http://www.sno.phy.queensu.ca/~phil/exiftool/TagNames/index.html) that should be included or excluded. If omitted, the function will return all metadata that is available in `source`. Add a single dash `-` in front of the tag to exclude it. Not case sensitive. Examples:
+  * `tags: ['imagewidth', 'imageheight']` will only return the width and height of an image/video.
+  * `tags: ['-imagewidth', '-imageheight']` will exclude width and height in the returned metadata.
+* `useBufferLimit`: If set to `false` the whole Buffer will be piped into ExifTool otherwise `maxBufferSize` will be used to cap the Buffer. (default: `true`)
 * `maxBufferSize`: Maximum length of Buffer, that will be piped into ExifTool. (default: `10000`)
 * `callback`: Usual `function (error, metadata)` format. If omitted, `metadata()` will return a Promise
 
+## Example
+------
+Get filtered metadata (only imagewidth and imageheight) for a list of files under `./sampleimages/`.
 
-# Example
-
-### Get imagewidth and imageheight from files in `./sampleimages/`
 Also see: [exiftool-wrapper/examples](https://github.com/RoyalBingBong/exiftool-wrapper/tree/master/examples)
 ```javascript
 var exiftool = require('exiftool-wrapper');
@@ -86,12 +96,14 @@ fs.readdir(samplepath, function(err, files) {
 ]
 ```
 
-# Notes
+## Notes
+------
 * It is not the fastest way to get your metadata.
-* If `maxBufferSize` is set too small, then some tags will be missing. `10000` worked find for basic data like imageheight and imagewidth.
-* webm-files files are problematic when using `useBufferLimit: false`
+* Some tags will be missing, if `maxBufferSize` is too small. `10000` worked fine for basic data like imageheight and imagewidth.
+* .webm-files appear to be problematic when using `useBufferLimit: false`. This is an issue with ExifTool itself. It has problems with piped in webm-files.
 * Feedback would be great, since this is my first module.
 
 
 ## Todo
+------
 Real tests.
