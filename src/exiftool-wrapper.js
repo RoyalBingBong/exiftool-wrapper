@@ -6,7 +6,7 @@ export function metadata ({source, tags, useBufferLimit = true, maxBufferSize = 
   return new Promise((resolve, reject) => {
     process.nextTick(() => {
       if(!source) {
-        let error = new Error('Missing source');
+        let error = new Error('Undefined "source"');
         tryCallback(callback, error);
         reject(error);
       }
@@ -23,7 +23,7 @@ export function metadata ({source, tags, useBufferLimit = true, maxBufferSize = 
       } else if (Array.isArray(source)) {
         exifparams = exifparams.concat(source);
       } else {
-        let error =  new Error('Invalid type for "source"!');
+        let error =  new Error('Invalid type for "source". Valid types: String, String[] and Buffer');
         tryCallback(callback, error);
         reject(error);
       }
@@ -63,6 +63,10 @@ export function metadata ({source, tags, useBufferLimit = true, maxBufferSize = 
           }
         } else {
           let error = new Error("Exiftool returned an error");
+          error.commandlog = {
+            "stdout": exifdata,
+            "stderr": exiferr,
+          }
           tryCallback(callback, error);
           reject(error);
         }
@@ -73,7 +77,7 @@ export function metadata ({source, tags, useBufferLimit = true, maxBufferSize = 
 
 export function metadataSync({source, tags, useBufferLimit = true, maxBufferSize = 10000}) {
   if(!source) {
-    throw new Error('Missing source');
+    throw new Error('Undefined "source"');
   }
   let exifparams = prepareTags(tags);
   exifparams.push('-j');    // "-j" for Exiftool json output
@@ -94,7 +98,7 @@ export function metadataSync({source, tags, useBufferLimit = true, maxBufferSize
     exifparams = exifparams.concat(source)
     etdata = cp.spawnSync('exiftool', exifparams);
   } else {
-    throw new Error('Invalid type for "source"!');
+    throw new Error('Invalid type for "source". Valid types: String, String[] and Buffer');
   }
 
   try {
@@ -104,12 +108,14 @@ export function metadataSync({source, tags, useBufferLimit = true, maxBufferSize
     }
     return parseddata;
   } catch(e) {
-    throw new Error('Could not parse data returned by ExifTool');
+    let err = new Error('Could not parse data returned by ExifTool');
+    err.commandlog = {
+      "stdout": etdata.stdout,
+      "stderr": etdata.stderr,
+    }
+    throw err
   }
 }
-
-
-
 
 /**
  * Helper function for callbacks
