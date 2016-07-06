@@ -1,0 +1,21 @@
+[{
+  "SourceFile": "D:/Projekte/nodejs/exiftool-wrapper/test/testfiles/Geotag.xml",
+  "ExifToolVersion": 10.19,
+  "FileName": "Geotag.xml",
+  "Directory": "D:/Projekte/nodejs/exiftool-wrapper/test/testfiles",
+  "FileSize": "680 bytes",
+  "FileModifyDate": "2016:05:02 08:19:08+02:00",
+  "FileAccessDate": "2016:06:14 05:38:12+02:00",
+  "FileCreateDate": "2016:06:14 05:38:12+02:00",
+  "FilePermissions": "rw-rw-rw-",
+  "FileType": "XML",
+  "FileTypeExtension": "xml",
+  "MIMEType": "application/xml",
+  "HistoryXmlns": "http://www.garmin.com/xmlschemas/ForerunnerLogbook",
+  "HistorySchemaLocation": "http://www.garmin.com/xmlschemas/ForerunnerLogbook http://www.garmin.com/xmlschemas/ForerunnerLogbookv1.xsd",
+  "HistoryVersion": 1,
+  "HistoryRunTrackTrackpointPositionLatitude": 43.64987,
+  "HistoryRunTrackTrackpointPositionLongitude": -79.58320,
+  "HistoryRunTrackTrackpointPositionAltitude": 150.374,
+  "HistoryRunTrackTrackpointTime": "2004:08:28 14:15:00Z"
+}]

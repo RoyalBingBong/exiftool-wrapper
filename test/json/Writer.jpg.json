@@ -1,0 +1,22 @@
+[{
+  "SourceFile": "D:/Projekte/nodejs/exiftool-wrapper/test/testfiles/Writer.jpg",
+  "ExifToolVersion": 10.19,
+  "FileName": "Writer.jpg",
+  "Directory": "D:/Projekte/nodejs/exiftool-wrapper/test/testfiles",
+  "FileSize": "251 bytes",
+  "FileModifyDate": "2016:05:02 08:19:08+02:00",
+  "FileAccessDate": "2016:06:14 05:38:12+02:00",
+  "FileCreateDate": "2016:06:14 05:38:12+02:00",
+  "FilePermissions": "rw-rw-rw-",
+  "FileType": "JPEG",
+  "FileTypeExtension": "jpg",
+  "MIMEType": "image/jpeg",
+  "ImageWidth": 8,
+  "ImageHeight": 8,
+  "EncodingProcess": "Baseline DCT, Huffman coding",
+  "BitsPerSample": 8,
+  "ColorComponents": 3,
+  "YCbCrSubSampling": "YCbCr4:2:0 (2 2)",
+  "ImageSize": "8x8",
+  "Megapixels": 0.000064
+}]

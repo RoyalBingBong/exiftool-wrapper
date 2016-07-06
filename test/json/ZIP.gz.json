@@ -1,0 +1,21 @@
+[{
+  "SourceFile": "D:/Projekte/nodejs/exiftool-wrapper/test/testfiles/ZIP.gz",
+  "ExifToolVersion": 10.19,
+  "FileName": "ZIP.gz",
+  "Directory": "D:/Projekte/nodejs/exiftool-wrapper/test/testfiles",
+  "FileSize": "71 bytes",
+  "FileModifyDate": "2016:05:02 08:19:08+02:00",
+  "FileAccessDate": "2016:06:14 05:38:13+02:00",
+  "FileCreateDate": "2016:06:14 05:38:13+02:00",
+  "FilePermissions": "rw-rw-rw-",
+  "FileType": "GZIP",
+  "FileTypeExtension": "gz",
+  "MIMEType": "application/x-gzip",
+  "Compression": "Deflated",
+  "Flags": "FileName, Comment",
+  "ModifyDate": "2009:11:05 17:09:24+01:00",
+  "ExtraFlags": "Maximum Compression",
+  "OperatingSystem": "Unix",
+  "ArchivedFileName": "test.txt",
+  "Comment": "This is a test comment"
+}]

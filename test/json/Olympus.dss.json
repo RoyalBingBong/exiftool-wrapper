@@ -1,0 +1,18 @@
+[{
+  "SourceFile": "D:/Projekte/nodejs/exiftool-wrapper/test/testfiles/Olympus.dss",
+  "ExifToolVersion": 10.19,
+  "FileName": "Olympus.dss",
+  "Directory": "D:/Projekte/nodejs/exiftool-wrapper/test/testfiles",
+  "FileSize": "80 bytes",
+  "FileModifyDate": "2016:05:02 08:19:08+02:00",
+  "FileAccessDate": "2016:06:14 05:38:12+02:00",
+  "FileCreateDate": "2016:06:14 05:38:12+02:00",
+  "FilePermissions": "rw-rw-rw-",
+  "FileType": "DSS",
+  "FileTypeExtension": "dss",
+  "MIMEType": "audio/x-dss",
+  "Model": "DS2300          ",
+  "StartTime": "2005:11:16 13:52:42",
+  "EndTime": "2005:11:16 13:52:53",
+  "Duration": "10.00 s"
+}]

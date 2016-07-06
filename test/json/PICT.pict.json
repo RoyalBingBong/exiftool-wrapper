@@ -1,0 +1,20 @@
+[{
+  "SourceFile": "D:/Projekte/nodejs/exiftool-wrapper/test/testfiles/PICT.pict",
+  "ExifToolVersion": 10.19,
+  "FileName": "PICT.pict",
+  "Directory": "D:/Projekte/nodejs/exiftool-wrapper/test/testfiles",
+  "FileSize": "150 bytes",
+  "FileModifyDate": "2016:05:02 08:19:08+02:00",
+  "FileAccessDate": "2016:06:14 05:38:12+02:00",
+  "FileCreateDate": "2016:06:14 05:38:12+02:00",
+  "FilePermissions": "rw-rw-rw-",
+  "FileType": "PICT",
+  "FileTypeExtension": "pict",
+  "MIMEType": "image/pict",
+  "ImageWidth": 8,
+  "ImageHeight": 8,
+  "XResolution": 72,
+  "YResolution": 72,
+  "ImageSize": "8x8",
+  "Megapixels": 0.000064
+}]

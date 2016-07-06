@@ -1,0 +1,19 @@
+[{
+  "SourceFile": "D:/Projekte/nodejs/exiftool-wrapper/test/testfiles/XMP6.xmp",
+  "ExifToolVersion": 10.19,
+  "FileName": "XMP6.xmp",
+  "Directory": "D:/Projekte/nodejs/exiftool-wrapper/test/testfiles",
+  "FileSize": "1668 bytes",
+  "FileModifyDate": "2016:05:02 08:19:08+02:00",
+  "FileAccessDate": "2016:06:14 05:38:13+02:00",
+  "FileCreateDate": "2016:06:14 05:38:13+02:00",
+  "FilePermissions": "rw-rw-rw-",
+  "FileType": "XMP",
+  "FileTypeExtension": "xmp",
+  "MIMEType": "application/rdf+xml",
+  "XMPToolkit": "Image::ExifTool 9.97",
+  "Test": "tabby",
+  "Rating": 2,
+  "Subject": "x",
+  "Title": "a title"
+}]

@@ -1,0 +1,20 @@
+[{
+  "SourceFile": "D:/Projekte/nodejs/exiftool-wrapper/test/testfiles/EXE.macho",
+  "ExifToolVersion": 10.19,
+  "FileName": "EXE.macho",
+  "Directory": "D:/Projekte/nodejs/exiftool-wrapper/test/testfiles",
+  "FileSize": "9.3 kB",
+  "FileModifyDate": "2016:05:02 08:19:08+02:00",
+  "FileAccessDate": "2016:06:14 05:38:12+02:00",
+  "FileCreateDate": "2016:06:14 05:38:12+02:00",
+  "FilePermissions": "rw-rw-rw-",
+  "FileType": "Mach-O executable",
+  "FileTypeExtension": "",
+  "MIMEType": "application/octet-stream",
+  "CPUArchitecture": "32 bit",
+  "CPUByteOrder": "Big endian",
+  "CPUType": "PowerPC",
+  "CPUSubtype": "PowerPC (all)",
+  "ObjectFileType": "Demand paged executable",
+  "ObjectFlags": "No undefs, Dyld link, Two level"
+}]

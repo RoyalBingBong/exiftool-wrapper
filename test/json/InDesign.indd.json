@@ -1,0 +1,23 @@
+[{
+  "SourceFile": "D:/Projekte/nodejs/exiftool-wrapper/test/testfiles/InDesign.indd",
+  "ExifToolVersion": 10.19,
+  "FileName": "InDesign.indd",
+  "Directory": "D:/Projekte/nodejs/exiftool-wrapper/test/testfiles",
+  "FileSize": "12 kB",
+  "FileModifyDate": "2016:05:02 08:19:08+02:00",
+  "FileAccessDate": "2016:06:14 05:38:12+02:00",
+  "FileCreateDate": "2016:06:14 05:38:12+02:00",
+  "FilePermissions": "rw-rw-rw-",
+  "FileType": "INDD",
+  "FileTypeExtension": "indd",
+  "MIMEType": "application/x-indesign",
+  "XMPToolkit": "XMP toolkit 3.0-29, framework 1.6",
+  "About": "d5d09d4b-2831-11dc-bfa2-d89eae7bab84",
+  "CreateDate": "2007:06:30 00:19:02Z",
+  "CreatorTool": "Adobe InDesign 3.0",
+  "MetadataDate": "2007:06:30 00:19:17Z",
+  "ModifyDate": "2007:06:30 00:19:17Z",
+  "DocumentID": "adobe:docid:indd:d5d09d4a-2831-11dc-bfa2-d89eae7bab84",
+  "RenditionClass": "default",
+  "Format": "application/x-indesign"
+}]

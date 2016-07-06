@@ -1,0 +1,22 @@
+[{
+  "SourceFile": "D:/Projekte/nodejs/exiftool-wrapper/test/testfiles/ZIP.zip",
+  "ExifToolVersion": 10.19,
+  "FileName": "ZIP.zip",
+  "Directory": "D:/Projekte/nodejs/exiftool-wrapper/test/testfiles",
+  "FileSize": "167 bytes",
+  "FileModifyDate": "2016:05:02 08:19:08+02:00",
+  "FileAccessDate": "2016:06:14 05:38:13+02:00",
+  "FileCreateDate": "2016:06:14 05:38:13+02:00",
+  "FilePermissions": "rw-rw-rw-",
+  "FileType": "ZIP",
+  "FileTypeExtension": "zip",
+  "MIMEType": "application/zip",
+  "ZipRequiredVersion": 10,
+  "ZipBitFlag": 0,
+  "ZipCompression": "None",
+  "ZipModifyDate": "2008:08:28 09:54:23",
+  "ZipCRC": "0x6e17461a",
+  "ZipCompressedSize": 19,
+  "ZipUncompressedSize": 19,
+  "ZipFileName": "test.txt"
+}]

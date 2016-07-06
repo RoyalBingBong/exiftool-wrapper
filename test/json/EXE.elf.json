@@ -1,0 +1,18 @@
+[{
+  "SourceFile": "D:/Projekte/nodejs/exiftool-wrapper/test/testfiles/EXE.elf",
+  "ExifToolVersion": 10.19,
+  "FileName": "EXE.elf",
+  "Directory": "D:/Projekte/nodejs/exiftool-wrapper/test/testfiles",
+  "FileSize": "2.8 kB",
+  "FileModifyDate": "2016:05:02 08:19:08+02:00",
+  "FileAccessDate": "2016:06:14 05:38:12+02:00",
+  "FileCreateDate": "2016:06:14 05:38:12+02:00",
+  "FilePermissions": "rw-rw-rw-",
+  "FileType": "ELF executable",
+  "FileTypeExtension": "",
+  "MIMEType": "application/octet-stream",
+  "CPUArchitecture": "32 bit",
+  "CPUByteOrder": "Little endian",
+  "ObjectFileType": "Executable file",
+  "CPUType": "i386"
+}]

@@ -1,0 +1,22 @@
+[{
+  "SourceFile": "D:/Projekte/nodejs/exiftool-wrapper/test/testfiles/Real.ra",
+  "ExifToolVersion": 10.19,
+  "FileName": "Real.ra",
+  "Directory": "D:/Projekte/nodejs/exiftool-wrapper/test/testfiles",
+  "FileSize": "130 bytes",
+  "FileModifyDate": "2016:05:02 08:19:08+02:00",
+  "FileAccessDate": "2016:06:14 05:38:12+02:00",
+  "FileCreateDate": "2016:06:14 05:38:12+02:00",
+  "FilePermissions": "rw-rw-rw-",
+  "FileType": "RA",
+  "FileTypeExtension": "ra",
+  "MIMEType": "audio/x-pn-realaudio",
+  "AudioBytes": 704352,
+  "BytesPerMinute": 299743,
+  "AudioFrameSize": 348,
+  "SampleRate": 22050,
+  "BitsPerSample": 16,
+  "Channels": 1,
+  "Title": "The Sewing Girls",
+  "Copyright": "** institut f?r universelle zusammenh?nge"
+}]

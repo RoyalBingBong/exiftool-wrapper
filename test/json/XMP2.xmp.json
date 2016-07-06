@@ -1,0 +1,22 @@
+[{
+  "SourceFile": "D:/Projekte/nodejs/exiftool-wrapper/test/testfiles/XMP2.xmp",
+  "ExifToolVersion": 10.19,
+  "FileName": "XMP2.xmp",
+  "Directory": "D:/Projekte/nodejs/exiftool-wrapper/test/testfiles",
+  "FileSize": "890 bytes",
+  "FileModifyDate": "2016:05:02 08:19:08+02:00",
+  "FileAccessDate": "2016:06:14 05:38:13+02:00",
+  "FileCreateDate": "2016:06:14 05:38:13+02:00",
+  "FilePermissions": "rw-rw-rw-",
+  "FileType": "XMP",
+  "FileTypeExtension": "xmp",
+  "MIMEType": "application/rdf+xml",
+  "Title": "XMP nodeID test (XMP written by f-spot)",
+  "Lens": "18.0 - 55.0mm",
+  "SerialNumber": "0123456789",
+  "ImageHeight": 2048,
+  "ImageWidth": 3072,
+  "Subject": ["ExifTool","XMP","nodeID","test"],
+  "ImageSize": "3072x2048",
+  "Megapixels": 6.3
+}]

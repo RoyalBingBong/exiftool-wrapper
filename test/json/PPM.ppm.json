@@ -1,0 +1,20 @@
+[{
+  "SourceFile": "D:/Projekte/nodejs/exiftool-wrapper/test/testfiles/PPM.ppm",
+  "ExifToolVersion": 10.19,
+  "FileName": "PPM.ppm",
+  "Directory": "D:/Projekte/nodejs/exiftool-wrapper/test/testfiles",
+  "FileSize": "223 bytes",
+  "FileModifyDate": "2016:05:02 08:19:08+02:00",
+  "FileAccessDate": "2016:06:14 05:38:12+02:00",
+  "FileCreateDate": "2016:06:14 05:38:12+02:00",
+  "FilePermissions": "rw-rw-rw-",
+  "FileType": "PPM",
+  "FileTypeExtension": "ppm",
+  "MIMEType": "image/x-portable-pixmap",
+  "Comment": "ExifTool PPM test",
+  "ImageWidth": 8,
+  "ImageHeight": 8,
+  "MaxVal": 255,
+  "ImageSize": "8x8",
+  "Megapixels": 0.000064
+}]

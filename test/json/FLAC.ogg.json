@@ -1,0 +1,23 @@
+[{
+  "SourceFile": "D:/Projekte/nodejs/exiftool-wrapper/test/testfiles/FLAC.ogg",
+  "ExifToolVersion": 10.19,
+  "FileName": "FLAC.ogg",
+  "Directory": "D:/Projekte/nodejs/exiftool-wrapper/test/testfiles",
+  "FileSize": "151 bytes",
+  "FileModifyDate": "2016:05:02 08:19:08+02:00",
+  "FileAccessDate": "2016:06:14 05:38:12+02:00",
+  "FileCreateDate": "2016:06:14 05:38:12+02:00",
+  "FilePermissions": "rw-rw-rw-",
+  "FileType": "OGG",
+  "FileTypeExtension": "ogg",
+  "MIMEType": "audio/x-ogg",
+  "BlockSizeMin": 4608,
+  "BlockSizeMax": 4608,
+  "FrameSizeMin": 0,
+  "FrameSizeMax": 0,
+  "SampleRate": 8000,
+  "Channels": 2,
+  "BitsPerSample": 8,
+  "TotalSamples": 0,
+  "Vendor": "reference libFLAC 1.1.2 20050205"
+}]

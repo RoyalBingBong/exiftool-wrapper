@@ -1,0 +1,17 @@
+[{
+  "SourceFile": "D:/Projekte/nodejs/exiftool-wrapper/test/testfiles/PDF2.pdf",
+  "ExifToolVersion": 10.19,
+  "FileName": "PDF2.pdf",
+  "Directory": "D:/Projekte/nodejs/exiftool-wrapper/test/testfiles",
+  "FileSize": "2.2 kB",
+  "FileModifyDate": "2016:05:02 08:19:08+02:00",
+  "FileAccessDate": "2016:06:14 05:38:12+02:00",
+  "FileCreateDate": "2016:06:14 05:38:12+02:00",
+  "FilePermissions": "rw-rw-rw-",
+  "FileType": "PDF",
+  "FileTypeExtension": "pdf",
+  "MIMEType": "application/pdf",
+  "PDFVersion": 1.3,
+  "Linearized": "No",
+  "PageCount": 1
+}]

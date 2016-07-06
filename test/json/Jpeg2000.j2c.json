@@ -1,0 +1,19 @@
+[{
+  "SourceFile": "D:/Projekte/nodejs/exiftool-wrapper/test/testfiles/Jpeg2000.j2c",
+  "ExifToolVersion": 10.19,
+  "FileName": "Jpeg2000.j2c",
+  "Directory": "D:/Projekte/nodejs/exiftool-wrapper/test/testfiles",
+  "FileSize": "618 bytes",
+  "FileModifyDate": "2016:05:02 08:19:08+02:00",
+  "FileAccessDate": "2016:06:14 05:38:12+02:00",
+  "FileCreateDate": "2016:06:14 05:38:12+02:00",
+  "FilePermissions": "rw-rw-rw-",
+  "FileType": "J2C",
+  "FileTypeExtension": "j2c",
+  "MIMEType": "image/x-j2c",
+  "ImageWidth": 8,
+  "ImageHeight": 8,
+  "Comment": "Kakadu-v4.2.1",
+  "ImageSize": "8x8",
+  "Megapixels": 0.000064
+}]

@@ -1,0 +1,15 @@
+[{
+  "SourceFile": "D:/Projekte/nodejs/exiftool-wrapper/test/testfiles/Real.ram",
+  "ExifToolVersion": 10.19,
+  "FileName": "Real.ram",
+  "Directory": "D:/Projekte/nodejs/exiftool-wrapper/test/testfiles",
+  "FileSize": "69 bytes",
+  "FileModifyDate": "2016:05:02 08:19:08+02:00",
+  "FileAccessDate": "2016:06:14 05:38:12+02:00",
+  "FileCreateDate": "2016:06:14 05:38:12+02:00",
+  "FilePermissions": "rw-rw-rw-",
+  "FileType": "RAM",
+  "FileTypeExtension": "ram",
+  "MIMEType": "audio/x-pn-realaudio",
+  "URL": "rtsp://media.real.com/showcase/service/samples/rob_h_realvideo9_28.rm"
+}]

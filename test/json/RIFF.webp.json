@@ -1,0 +1,21 @@
+[{
+  "SourceFile": "D:/Projekte/nodejs/exiftool-wrapper/test/testfiles/RIFF.webp",
+  "ExifToolVersion": 10.19,
+  "FileName": "RIFF.webp",
+  "Directory": "D:/Projekte/nodejs/exiftool-wrapper/test/testfiles",
+  "FileSize": "58 bytes",
+  "FileModifyDate": "2016:05:02 08:19:08+02:00",
+  "FileAccessDate": "2016:06:14 05:38:12+02:00",
+  "FileCreateDate": "2016:06:14 05:38:12+02:00",
+  "FilePermissions": "rw-rw-rw-",
+  "FileType": "WEBP",
+  "FileTypeExtension": "webp",
+  "MIMEType": "image/webp",
+  "VP8Version": "1 (bilinear reconstruction, simple loop)",
+  "ImageWidth": 16,
+  "HorizontalScale": 0,
+  "ImageHeight": 16,
+  "VerticalScale": 0,
+  "ImageSize": "16x16",
+  "Megapixels": 0.000256
+}]
