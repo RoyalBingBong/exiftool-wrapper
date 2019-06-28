@@ -1,6 +1,6 @@
 {
   "name": "exiftool-wrapper",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "JavaScript-Wrapper for ExifTool by Phil Harvey.",
   "main": "lib/exiftool-wrapper.js",
   "engine": {
