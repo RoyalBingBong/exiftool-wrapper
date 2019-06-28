@@ -1,9 +1,8 @@
-import {spawn, spawnSync} from 'child_process'
-
+import { spawn, spawnSync } from 'child_process'
 
 /**
  * Returns the metadata of the given source. Returns a Promise or uses the passed callback.
- * 
+ *
  * @export
  * @param {object} options
  * @param {string|string[]|Buffer} options.source - The media for which we want to extract the metadata
@@ -13,7 +12,7 @@ import {spawn, spawnSync} from 'child_process'
  * @param {metadataCallback} [options.callback] - Callback that receives the metadata
  * @returns {Promise.<object[]>} A promise that contains the metadata for the media in an Array of Objects
  */
-export function metadata ({source, tags, useBufferLimit = true, maxBufferSize = 10000, callback}) {
+export function metadata({ source, tags, useBufferLimit = true, maxBufferSize = 10000, callback }) {
   return new Promise((resolve, reject) => {
     process.nextTick(() => {
       if (!source) {
@@ -29,7 +28,7 @@ export function metadata ({source, tags, useBufferLimit = true, maxBufferSize = 
 
       if (Buffer.isBuffer(source)) {
         usingBuffer = true
-        exifparams.push('-')   // "-" for piping the buffer into Exiftool
+        exifparams.push('-') // "-" for piping the buffer into Exiftool
       } else if (typeof source === 'string') {
         exifparams.push(source)
       } else if (Array.isArray(source)) {
@@ -45,7 +44,7 @@ export function metadata ({source, tags, useBufferLimit = true, maxBufferSize = 
       let exiferr = ''
 
       if (usingBuffer) {
-        let buf = (useBufferLimit ? source.slice(0, maxBufferSize) : source)
+        let buf = useBufferLimit ? source.slice(0, maxBufferSize) : source
         exif.stdin.write(buf)
         exif.stdin.end()
       }
@@ -57,24 +56,23 @@ export function metadata ({source, tags, useBufferLimit = true, maxBufferSize = 
         exiferr += data
       })
       exif.on('close', (code) => {
-        if (code === 0) {
-          try {
-            var parseddata = JSON.parse(exifdata)
-            if (parseddata.length === 1) {
-              parseddata = parseddata[0]
-            }
-            tryCallback(callback, null, parseddata)
-            resolve(parseddata)
-          } catch (err) {
-            tryCallback(callback, err)
-            reject(err)
+        try {
+          var parseddata = JSON.parse(exifdata)
+          if (parseddata.length === 1) {
+            parseddata = parseddata[0]
           }
-        } else {
-          let error = new Error('Exiftool returned an error')
-          error.commandlog = {
-            'stdout': exifdata,
-            'stderr': exiferr
+          tryCallback(callback, null, parseddata)
+          resolve(parseddata)
+        } catch (_) {
+          let error
+          if (exiferr.length > 0) {
+            error = new Error(`Exiftool failed with exit code ${code}:\n ${exiferr}`)
+          } else {
+            error = new Error('Could not parse exiftool output!')
           }
+          error.stderr = exiferr
+          error.stdout = exifdata
+          error.code = code
           tryCallback(callback, error)
           reject(error)
         }
@@ -85,7 +83,7 @@ export function metadata ({source, tags, useBufferLimit = true, maxBufferSize = 
 
 /**
  * Returns the metadata of the given source synchroniously.
- * 
+ *
  * @export
  * @param {object} options
  * @param {string|string[]|Buffer} options.source - The media for which we want to extract the metadata
@@ -94,7 +92,7 @@ export function metadata ({source, tags, useBufferLimit = true, maxBufferSize = 
  * @param {number} [options.maxBufferSize=10000] - Size of the buffer that is piped into ExifTool
  * @returns {object[]} An array of objects that contains the metadata for each media
  */
-export function metadataSync ({source, tags, useBufferLimit = true, maxBufferSize = 10000}) {
+export function metadataSync({ source, tags, useBufferLimit = true, maxBufferSize = 10000 }) {
   if (!source) {
     throw new Error('Undefined "source"')
   }
@@ -106,8 +104,8 @@ export function metadataSync ({source, tags, useBufferLimit = true, maxBufferSiz
   if (Buffer.isBuffer(source)) {
     // "-" for piping the buffer into Exiftool
     exifparams.push('-')
-    let buf = (useBufferLimit ? source.slice(0, maxBufferSize) : source)
-    etdata = spawnSync('exiftool', exifparams, {input: buf})
+    let buf = useBufferLimit ? source.slice(0, maxBufferSize) : source
+    etdata = spawnSync('exiftool', exifparams, { input: buf })
   } else if (typeof source === 'string') {
     exifparams.push(source)
     etdata = spawnSync('exiftool', exifparams)
@@ -127,8 +125,8 @@ export function metadataSync ({source, tags, useBufferLimit = true, maxBufferSiz
   } catch (e) {
     let err = new Error('Could not parse data returned by ExifTool')
     err.commandlog = {
-      'stdout': etdata.stdout,
-      'stderr': etdata.stderr
+      stdout: etdata.stdout,
+      stderr: etdata.stderr,
     }
     throw err
   }
@@ -145,7 +143,7 @@ function tryCallback(cbfunction, error, result) {
 function prepareTags(tags) {
   if (tags) {
     tags = tags.map((tagname) => {
-      return ('-' + tagname)
+      return '-' + tagname
     })
     return tags
   }

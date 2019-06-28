@@ -11,13 +11,12 @@
     "test": "test"
   },
   "devDependencies": {
-    "babel": "^6.5.2",
-    "babel-cli": "^6.10.1",
-    "babel-plugin-transform-es2015-modules-commonjs": "^6.10.3",
-    "chai": "^3.5.0",
-    "chai-fuzzy": "^1.6.1",
-    "chai-json-equal": "0.0.1",
-    "mocha": "^2.5.3"
+    "babel": "^6.23.0",
+    "babel-cli": "^6.26.0",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
+    "chai": "^4.2.0",
+    "chai-exclude": "^2.0.1",
+    "mocha": "^6.1.4"
   },
   "scripts": {
     "babel": "babel -d lib/ src/",
